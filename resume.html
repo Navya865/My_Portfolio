@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Resume - Navya Bokkala</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            /* background-color: ; */
+            background: url(images/reume-vedio.mp4);
+            background-color: gold;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container .resume {
+            margin-top: 20px;
+            justify-content: right;
+        }
+        .pdf-container {
+            position: absolute;
+            top: -100%;
+            transition: top 1s ease-in-out;
+        }
+        .pdf-container.slide-down {
+            top: 0;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const pdfContainer = document.querySelector('.pdf-container');
+            setTimeout(() => {
+                pdfContainer.classList.add('slide-down');
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="resume">
+            <h1>MY RESUME</h1>
+            <h3>Here's my resume:</h3>
+        </div>
+        <div class="pdf-container">
+            <embed src="pdfs/NAVYA--BOKKALA-FlowCV-Resume-20240316.pdf" width="800px" height="1000px" />
+        </div>
+    </div>
+</body>
+</html>
